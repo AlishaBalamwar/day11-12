@@ -2,8 +2,7 @@ package com.inventory.inventorymanagement;
 
 import java.io.FileWriter;
 import java.io.IOException;
-
-import org.json.JSONArray;
+import org.json.simple.JSONArray;
 import org.json.JSONObject;
 
 public class App 
@@ -39,9 +38,9 @@ public class App
 	        
 	       //Add food item to list
 	       JSONArray inventoryDataList = new JSONArray();
-	       inventoryDataList.put(jsonObject1);
-	       inventoryDataList.put(jsonObject2);
-	       inventoryDataList.put(jsonObject3);
+	       inventoryDataList.add(jsonObject1);
+	       inventoryDataList.add(jsonObject2);
+	       inventoryDataList.add(jsonObject3);
         
     	    try {
     	         FileWriter file = new FileWriter("E:/inventorymanagement/src/main/java/com/inventory/inventorymanagement/app.json");
